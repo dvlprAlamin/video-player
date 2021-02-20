@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Video Player</title>
+</head>
+
+<body>
+    <div id="player" class="mini-player">
+        <video id="player-viewer" src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"></video>
+        <div id="progress">
+            <div id="progress-field"></div>
+        </div>
+        <div id="video-controls">
+            <button title="Play/Pause (k)" id="player-btn">▶</button>
+            <div class="duration">
+                <span current-minute></span>.<span current-second></span>/<span total-minute></span>.<span
+                    total-second></span>
+            </div>
+            <div class="volume">
+                <img class="icon" src="./icon/volume.png" alt="">
+                <input title="Volume" type="range" name="volume" id="volume" value="1" step=".1" min="0" max="1">
+            </div>
+            <div>
+                <img class="icon" src="./icon/speed.png" alt="">
+                <input title="Playback speed" type="range" name="playbackRate" id="speed" value="1" step=".25" min=".5"
+                    max="2">
+            </div>
+            <div id="skip-btns">
+                <button skip="-10" title="Backward 10 seconds" class="skip-btn">‹‹ 10s</button>
+                <button skip="25" title="Forward 25 seconds" class="skip-btn">25s ››</button>
+            </div>
+            <div class="controls-button">
+                <button id="theater-mode"><img title="Theater mode on/off (t)" class="" src="./icon/theater.png" alt="">
+                </button>
+                <button id="fullScreen"><img title="Full screen (f)" src="./icon/fullscreen.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
