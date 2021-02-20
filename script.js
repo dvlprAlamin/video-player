@@ -25,7 +25,7 @@ const durationUpdate = () => {
     currentSecond.innerText = Math.round(video.currentTime % 60);
     totalSecond.innerText = Math.round(video.duration % 60);
 }
-window.onload = durationUpdate;
+
 // toggle play button
 const togglePlay = () => video.paused ? video.play() : video.pause();
 
@@ -42,7 +42,6 @@ const updateProgress = () => {
     const percent = (video.currentTime / video.duration) * 100;
     progressField.style.flexBasis = `${percent}%`
 }
-
 
 playerBtn.addEventListener('click', togglePlay);
 video.addEventListener('click', togglePlay);
@@ -99,5 +98,3 @@ window.addEventListener("keydown", (e) => {
     e.key === "t" && theaterMode.click();
     console.log(volume.value);
 });
-
-console.log(video);
