@@ -40,8 +40,8 @@ button {
   max-height: 450px;
 }
 .theater-player {
-  width: 1000px;
-  height: 560px;
+  max-width: 1000px;
+  max-height: 565px;
   margin: 2rem auto;
 }
 #player:before {
