@@ -65,7 +65,7 @@ const fullScreenHandler = () => {
 }
 const theaterModeHandler = () => {
     player.classList.toggle('theater-player');
-    theaterImg.classList.toggle('min-theater');
+    theaterImg.classList.toggle('min-theater-img');
 }
 const miniPlayerHandler = () => video.requestPictureInPicture() !== document.exitPictureInPicture();
 
