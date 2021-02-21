@@ -13,6 +13,19 @@ button {
   outline: 0;
   cursor: pointer;
 }
+.loader {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.loader img {
+  height: 100%;
+  width: 100%;
+}
 #player-viewer {
   width: 100%;
   height: 100%;
@@ -21,7 +34,7 @@ button {
 #player {
   position: relative;
 }
-.mini-player {
+.player {
   margin: 2rem;
   width: 800px;
   height: 450px;
@@ -90,9 +103,12 @@ button {
 .controls-button button {
   background: transparent;
 }
-#fullScreen img {
+.controls-button img {
+  margin: 0 10px;
+}
+#fullScreen img,
+#mini-player img {
   height: 20px;
-  margin-left: 20px;
 }
 .min-theater {
   height: 16px;
@@ -104,11 +120,11 @@ button {
 #video-controls {
   display: none;
 }
-#player:hover #video-controls{
+#player:hover #video-controls {
   display: flex;
   transition: 1s;
 }
-#player:hover #progress{
+#player:hover #progress {
   margin-top: -50px;
 }
 
@@ -142,7 +158,7 @@ input[type="range"]::-moz-range-progress {
   background-color: #15d8da;
 }
 input[type="range"]::-moz-range-track {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 /* IE*/
 input[type="range"]::-ms-fill-lower {
@@ -151,3 +167,4 @@ input[type="range"]::-ms-fill-lower {
 input[type="range"]::-ms-fill-upper {
   background-color: #ffffff;
 }
+

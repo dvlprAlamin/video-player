@@ -10,8 +10,10 @@
 </head>
 
 <body>
-    <div id="player" class="mini-player">
-        <video id="player-viewer" src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"></video>
+    <div id="player" class="player">
+        <div id="loader" class="loader"><img src="./icon/loader.svg"></div>
+        <video id="player-viewer"
+            src="https://download.blender.org/demo/movies/BBB/bbb_sunflower_1080p_30fps_normal.mp4"></video>
         <div id="progress">
             <div id="progress-field"></div>
         </div>
@@ -23,21 +25,23 @@
             </div>
             <div class="volume">
                 <img class="icon" src="./icon/volume.png" alt="">
-                <input title="Volume" type="range" name="volume" id="volume" value="1" step=".1" min="0" max="1">
+                <input title="Volume ↑↓" type="range" name="volume" id="volume" value="100" step="10" min="0" max="100">
             </div>
             <div>
                 <img class="icon" src="./icon/speed.png" alt="">
-                <input title="Playback speed" type="range" name="playbackRate" id="speed" value="1" step=".25" min=".5"
-                    max="2">
+                <input title="Playback speed [ ]" type="range" name="playbackRate" id="speed" value="100" step="25"
+                    min="50" max="200">
             </div>
             <div id="skip-btns">
                 <button skip="-10" title="Backward 10 seconds" class="skip-btn">‹‹ 10s</button>
                 <button skip="25" title="Forward 25 seconds" class="skip-btn">25s ››</button>
             </div>
             <div class="controls-button">
-                <button id="theater-mode"><img title="Theater mode on/off (t)" class="" src="./icon/theater.png" alt="">
-                </button>
-                <button id="fullScreen"><img title="Full screen (f)" src="./icon/fullscreen.png" alt=""></button>
+                <button id="mini-player"><img title="Mini Player (i)" class="" src="./icon/mini.png" alt="">
+                    <button id="theater-mode"><img title="Theater mode on/off (t)" class="" src="./icon/theater.png"
+                            alt="">
+                    </button>
+                    <button id="fullScreen"><img title="Full screen (f)" src="./icon/fullscreen.png" alt=""></button>
             </div>
         </div>
     </div>
